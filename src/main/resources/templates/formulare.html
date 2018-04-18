@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Formulare</title>
+        <style>
+        * {color: red;}
+        fieldset  legend {
+	       background-color: rgba(102, 153, 255,0.9);
+        }
+        </style>
+    </head>
+    
+    <body>
+        <h3>Formulare</h3>
+        <form autocomplete="on">
+	        <fieldset>
+	            <legend>About offending film (part 1 of 3)</legend>
+	            <div>
+	                <label for="meinFilm">The film in question?</label>
+	                <input id="film" name="meinFilm" type="text" placeholder="e.g. King Kong" required="required" />
+	                <input type="file"  />
+	            </div>
+	            <div>
+	               <label for="yearOfCrime">Year Of Crime</label>
+	               <input type="number" min="1929" max="2015" required="required"/>
+	            </div>
+	            <div>
+	               <label for="awardWon">award won</label>
+	               <input type="text" name="awardWon" id="awardWon" list="awards" />
+	               <datalist id="awards">
+	               <select>
+	                       <option >Best picture</option>
+                           <option >Best Director</option>
+                           <option >Best Adapter</option>
+                           <option >Best Original Screenplay</option>
+	               </select>                             
+	               </datalist>
+	            </div>
+	            <div>
+	               <label for="whyItsWrong">Tell us why its wrong?</label>
+	               <textarea id="whyItsWrong" name="whyItsWrong" placeholder="I fell asleep within 20 minutes..." rows="8" cols="50" required="required"></textarea>
+	            </div>
+	            <div>
+	               <label for="howYouRateIt">How You rate it?</label>
+	               <input id="howYouRateIt" name="howYouRateIt" type="range" min="1" max="10" onchange="showValue(this.value)"><span id="range">5</span></input>
+	            </div>
+	            <script>
+	            function showValue(newValue){
+	            	document.getElementById("range").innerHTML=newValue;
+	            }
+	            </script>
+	        </fieldset>
+	        
+	        <fieldset>
+	           <legend>What should have won?</legend>
+	           
+	           <div>
+	               <label for="filmGod">The film that should have won?</label>
+	               <input type="text" id="filmGod" name="filmGod" placeholder="e.g. Cable Guy" required="required" /> 
+	           </div>
+	           
+	           <div>
+	               <label for="WhyItShould" >Tell us why it should have won?</label>
+	               <textarea rows="" cols="" name="WhyItShould" id="WhyItShould" placeholder="Hello??? Caable Guy!" required="required"></textarea>	               
+	           </div>
+	           <div>
+	               <label for="howYOuRateThis">How You rate it?</label>
+	               <input type="number" min="1" max="10" value="5" />
+	           </div>
+	        </fieldset>
+	        
+	        <fieldset>
+	           <legend>About You?</legend>
+	           <div>
+	               <label for="name">Your name</label>
+	               <input id="name" name="name" pattern="([a-zA-Z]{3,30}\s*)+[a-zA-Z]{3,30}" placeholder="Dwight Schultz" required="required" autofocus="autofocus"/>
+	           </div>
+	           <div>
+	               <label for="color">Your favourite color</label>
+	               <input id="color" name="color" type="color" />
+	           </div>
+	           <div>
+	               <label for="date">Date/Time</label>
+	               <input type="date" name="date" class="pickDate"/>
+	           </div>
+	           <div>
+	               <label for="telephone">Telephone</label>
+	               <input id="telephone" name="telephone" type="tel" placeholder="035056/22727" autocomplete="off" required="required" />
+	           </div>
+	           <div>
+                   <label for="email">Email</label>
+                   <input id="email" name="email" type="email" placeholder="krasowski@yahoo.de"  required="required" />
+               </div>
+               <div>
+                   <label for="web">Web</label>
+                   <input id="web" name="web" type="url" placeholder="www.google.de"  required="required" />
+               </div>
+	           
+	        </fieldset>
+	        
+	        
+	        <label>Ups Test label</label>
+	        <input type="text" placeholder="zahl" />
+	        <input type="submit" id="submit" value="Submit Redemption" />
+        </form>
+        
+    </body>
+</html>

@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Insert title here</title>
+
+
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+	integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+	crossorigin="anonymous" />
+
+<!-- Optional theme -->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+	integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+	crossorigin="anonymous" />
+
+
+
+</head>
+<body>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.js"></script>
+
+	<style type="text/css">
+section#intro-header {
+	background-image: url(imgs/landscape.jpg);
+	background-size: cover;
+}
+
+section#intro-header .wrap-headline {
+	position: relative;
+	padding-top: 20%;
+	padding-bottom: 20%;
+}
+
+section#intro-header h1 ,
+	section#intro-header h2 {
+		color: #FFF;
+}
+
+section#intro-header .btn-default {
+	background-color: rgba(255,255,255,0.5);
+	border:none;
+}
+section#about img {
+	margin-top: 6.5rem;
+	margin-bottom: 5rem;
+}
+section#about h3 {
+	margin-top: 10rem;
+}
+section#features{
+	background-color: #eef2f5;
+	border-top: 0.1rem solid #e9e9e9;
+	border-bottom: 0.1rem solid #e9e9e9;
+}
+section#features * {
+	color: #657C8E;
+}
+section#features .feature {
+	padding-top: 2rem;
+	padding-bottom: 4rem;
+	text-align: center;
+}
+section#features .glyphicon {
+	font-size: 2rem;
+}
+section#features .glyphicon-heart {
+	color: #E04C4C;
+}
+section#features .feature-tag {
+	max-width: 10.7rem;
+	display: inline-block;
+	text-align: left;
+	margin-left: 1.5rem;
+	font-size: 1.7rem;
+}
+footer {
+	background-color: #191919;
+	color: #ADADAD;
+	margin-top: 3em;
+}
+footer h5, footer img {
+	margin-top: 5em;
+	font-weight: bold;
+}
+footer .address {
+	margin-top: 5em;
+	margin-bottom: 5em;
+	color: #5A5A5A;
+}
+footer .ul {
+	margin-bottom: 5em;
+}
+footer address strong {
+	color: #ADADAD;
+	display: block;
+	padding-bottom: 0.62em;
+}
+footer a {
+	font-weight: 300;
+	color: #5A5A5A;
+}
+footer a:hover {
+	text-decoration: none;
+	color: #FFF;
+}
+
+section#meineForm {
+	margin-right: 5em;
+	margin-left: 5em;
+	margin-top: 5em;
+	margin-bottom: 5em;
+}
+
+section#newsletter {
+	border-top: 1px solid #E0E0E0;
+	padding-top: 3.2em;
+	margin-top: 2em;	
+}
+section#newsletter h4 {
+	padding: 1em;
+}
+section#newsletter form {
+	padding: 1em;
+	margin-top: 2em;
+	margin-bottom: 5em;
+}
+hidden-element {
+	display: none;
+}
+form#signin {
+	display: blocks;
+}
+section#team ul {
+	margin: 5rem 0;
+}
+section#team li {
+	margin: 0 rem;
+}
+section#team h5 {
+	font-size: 1.5rem;
+	font-weight: bold;
+}
+#nav-menu {
+	margin-right: 1rem;
+	max-width: 48em;
+}
+body {	
+	padding-top: 3.6rem;
+}
+</style>
+
+
+<!-- 		<nav class="navbar  navbar-default navbar-inverse navbar-fixed-top"> -->
+<!-- 			<div class="navbar-header"> -->
+<!-- 				<a class="navbar-brand" href="neueSeite.html">Company name</a> -->
+<!-- 			</div> -->
+<!-- 			<div class="navbar-right"> -->
+<!-- 				<ul class="nav navbar-nav"> -->
+<!-- 					<li><a href="#about">About</a></li> -->
+<!-- 					<li><a href="#features">Features</a></li> -->
+<!-- 					<li><a href="#pricing">Pricing</a></li> -->
+<!-- 					<li><a href="contact.html">Contact</a></li> -->
+<!-- 				</ul> -->
+<!-- 			</div> -->
+<!-- 		</nav> -->
+
+	<nav class="navbar  navbar-default navbar-inverse navbar-fixed-top">
+			<div class="navbar-header">
+<!-- 				<a class="navbar-brand" href="neueSeite.html">Company name</a> -->
+				<button type="button" class="btn btn-default" data-toggle="collapse" data-target="#navbar-menu" aria-expanded="false">
+					Toggle navigation
+				</button>			
+			</div>
+			
+			<div class="btn-group pull-right">
+				<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="collapse"  data-target="#meinDropDown">
+					Customer area <span class="caret"></span>
+				</button>
+				<ul class="dropdown-menu" id="meinDropDown">
+					<li><a href="#">Action</a></li>
+					<li><a href="#">Another Action</a></li>
+				</ul>
+			</div>
+			<form class="form-inline">
+				<div class="input-group text-center">
+					<input type="text" class="form-control" placeholder="Type the page title..."/>
+					<span class="input-group-btn">
+						<button class="btn btn-success" type="button">Search</button>
+					</span>
+				</div>
+			</form>
+			
+			
+			<div class="navbar-menu collapse navbar-right" id="navbar-menu">
+				<ul class="nav navbar-nav">
+					<li><a href="#about">About</a></li>
+					<li><a href="#features">Features</a></li>
+					<li><a href="#pricing">Pricing</a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+			</div>
+
+	</nav>
+
+
+	<section id="intro-header">
+		<div class="container">
+			<div class="row">
+				<div class="wrap-headline">
+					<h1 class="text-center">Company Name</h1>
+					<h2 class="text-center">Tagline message</h2>
+					<hr />
+					<ul class="list-inline list-unstyled text-center">
+						<li><a class="btn btn-default btn-lg" id="sign-btn" role="button" href="#">Sign in</a></li>
+						<li><a class="btn btn-primary btn-lg" role="button" href="#">Sign-up</a></li>
+					</ul>
+					<form id="signin" class="form-inline text-center hidden-element">
+						<div class="form-group">
+							<div class="input-group">
+								<div class="input-group-addon">@</div>
+								<input type="text" class="form-control" id="signin-email" placeholder="Email" />
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="input-group">
+								<div class="input-group-addon">*</div>
+								<input type="password" class="form-control" id="signin-password" placeholder="Password" />
+							</div>
+						</div>
+						<button type="submit" class="btn tbn-default">Sign in</button>
+					</form>
+					
+				</div>
+			</div>
+			
+		</div>
+	</section>
+	
+	<section id="about">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6">
+					<img src="imgs/storcks.jpg" class="img-responsive"/>
+				</div>
+				<div class="col-md-6">
+					<h3>Das ist ein Storch</h3>
+					<p>
+						Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+					</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6">
+					<h3>Das ist ein Ihpone</h3>
+					<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
+					sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+					 sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. 
+					 Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. 
+					 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
+					  et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+				</div>
+				<div class="col-md-6">
+					<img src="imgs/iphone.jpg" class="img-responsive"/>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	<section id="features">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<h3 class="text-center">Features</h3>
+					<p class="text-center">Features headline message</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-2 col-md-4">
+					<div class="feature">
+						<span class="glyphicon glyphicon-screenshot" aria-hidden="true"></span>
+						<span class="feature-tag">Product focus</span>
+					</div>
+				</div>
+				<div class="col-sm-2 col-md-4">
+					<div class="feature">
+						<span class="glyphicon glyphicon-education" aria-hidden="true"></span>
+						<span class="feature-tag">Teaching as passion</span>
+					</div>
+				</div>
+				<div class="col-sm-2 col-md-4">
+					<div class="feature">
+						<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+						<span class="feature-tag">Spreading knowledge</span>
+						<span class="feature-tag">Spreading knowledge</span>
+						<span >text</span>
+						<span >text</span>
+					</div>
+				</div>
+				<div class="col-sm-2 col-md-4">
+					<div class="feature">
+						<span class="glyphicon glyphicon-hourglass" aria-hidden="true"></span>
+						<span class="feature-tag">Save your day time</span>
+					</div>
+				</div>
+				<div class="col-sm-2 col-md-4">
+					<div class="feature">
+						<span class="glyphicon glyphicon-sunglasses" aria-hidden="true"></span>
+						<span class="feature-tag">Make it fancy</span>
+					</div>
+				</div>
+				<div class="col-sm-2 col-md-4">
+					<div class="feature">
+						<span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
+						<span class="feature-tag">Made with love</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	<section id="newsletter" class="text-center">
+		<h4>Stay connected with us. Join the newsletter to receive fresh info.</h4>
+		<form class="form-inline" method="post">
+			<div class="form-group">
+				<input class="form-control" placeholder="your name"/> 
+			</div>
+			<div class="form-group">
+				<input class="form-control" placeholder="your email"/>
+			</div>
+			<button type="submit" class="btn btn-primary">Join now</button>
+		</form>
+		
+	</section>
+	
+	<section id="meineForm">
+		<form method="get">
+			<div class="row form-group">
+				<label class="col-form-label col-md-3 col-md-offset-2">Mein Name</label>
+				<div class="col-md-6">
+					<input type="text" class="form-control" placeholder="Name" />
+				</div>
+			</div>
+			<div class="row form-group">
+				<label class="col-form-label col-md-3 col-md-offset-2">Meine Mannschaft</label>
+				<div class="col-md-6">
+					<input type="text" class="form-control" placeholder="Mannschaft" />
+				</div>
+			</div>
+		</form>
+	</section>
+	
+	<section id="team">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12">
+					<ul class="list-inline list-unstyled text-center">
+						<li>
+							<img src="imgs/dog-hero.jpg" class="img-rounded" />
+							<h5>Johny Doo</h5>
+							<p>CEO</p>
+						</li>
+						<li>
+							<img src="imgs/dog-hero.jpg" class="img-thumbnail" />
+							<h5>Rocio</h5>
+							<p>CFO</p>
+						</li>
+						<li>
+							<img src="imgs/ugly-dog.jpeg" class="img-circle" />
+							<h5>Richard</h5>
+							<p>CEO</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	<footer>
+		<div class="container">
+			<div class="col-sm-2">
+				<img src="imgs/dog.jpg" class="img-thumbnail"/>
+			</div>
+			<div class="col-sm-2">
+				<h5>The company</h5>
+				<ul class="list-unstyled">
+					<li><a href="#">Documentation</a></li>
+					<li><a href="#">Richard publisher</a></li>
+					<li><a href="#">Über mich</a></li>
+					<li><a href="#">Kontakte</a></li>
+				</ul> 
+			</div>
+			<div class="col-sm-2">
+				<h5>Social</h5>
+				<ul class="list-unstyled">
+					<li><a href="#">Facebook</a></li>
+					<li><a href="#">Twitter</a></li>
+					<li><a href="#">Blog</a></li>
+				</ul>
+			</div>
+			<div class="col-sm-2">
+				<h5>Support</h5>
+				<ul class="list-unstyled">
+					<li><a href="#">Contact</a></li>
+					<li><a href="#">Contact</a></li>
+					<li><a href="#">Contact</a></li>
+				</ul>
+			</div>
+			<div class="col-sm-4">
+				<address>
+					<strong>Name, Inc.</strong>
+					Adress line 1<br/>
+					Adress line 2<br/>
+					<abbr title="Phone">P:</abbr> (123) 456-7890
+				</address>
+			</div>
+		</div>
+	</footer>
+	
+	<script   src="https://code.jquery.com/jquery-3.2.1.slim.js"   integrity="sha256-tA8y0XqiwnpwmOIl3SGAcFl2RvxHjA8qp0+1uCGmRmg="   crossorigin="anonymous"></script>
+	<script src="js/main.js"></script>
+	
+</body>
+</html>

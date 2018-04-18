@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src="js/swfobject.js"></script>
+</head>
+<body>
+	<h3>Flash animation</h3>
+	<div id="flashcontent">Falls ncihts kommt!</div>
+	<object id="flashcontent"
+		classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="550px"
+		height="400px">
+		<param name="movie" value="imgs/mammyblue2.swf" />
+
+		<!--[if !IE]>-->
+		<object type="application/x-shockwave-flash" data="mymovie.swf"
+			width="550px" height="400px">
+			<p>Fallback or 'alternate' content goes here. This content will
+				only be visible if the SWF fails to load.</p>
+
+		</object>
+		<!--<![endif]-->
+
+	</object>
+	<video src="video/IMG_9144.m4v" width="400" height="300" controls="controls" loop="loop">
+	</video>
+	<audio src="music/dont.m4a" controls="controls">
+	</audio>
+</body>
+</html>

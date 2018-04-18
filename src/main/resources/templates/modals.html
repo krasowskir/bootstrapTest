@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+	integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+	crossorigin="anonymous" />
+
+<!-- Optional theme -->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+	integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+	crossorigin="anonymous" />
+</head>
+<body>
+
+	<h3>test</h3>
+	<button type="button" id="tweet" class="btn btn-default pull-right"
+		data-toggle="modal" data-target="#tweet-modal">
+		<span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+		Tweet
+	</button>
+	
+	<button type="button" class="btn btn-default" data-toggle="modal" data-target="#meinModal">
+	   MeinModal
+	</button>
+
+
+	<div class="modal" id="tweet-modal" tabindex="-1" role="dialog">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"
+						aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<h4 class="modal-title">Modal title</h4>
+				</div>
+				<div class="modal-body">
+				    <div class="row">
+				        <div class="col-sm-2">Use</div>
+				        <div class="col-sm-4">the</div>
+				        <div class="col-sm-6">grid system!</div>
+				    </div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-primary">Save changes</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+    <div id="meinModal" class="modal" role="dialog">
+       <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" data-dismiss="modal" class="close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title">Dog a new feed</h4>
+                </div>          
+                <div class="modal-body">
+                    <textarea rows="4" cols="" class="form-control" maxlength="140" placeholder="what do you want to bark?"></textarea>
+                </div>
+                <div class="modal-footer">
+                    <span class="char-count pull-left" data-max="140">140</span>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button class="btn btn-primary" type="submit">Tweet</button>
+                </div>
+                <div>test</div>
+            </div>
+            
+       </div>
+        
+    </div>
+    
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <th></th>
+                    <th scope="col">Spalte 1</th>
+                    <th scope="col">Spalte 2</th>
+                </tr>
+            </thead>
+            <tbody>            
+                <tr>
+                    <th scope="row">Disc space</th>
+                    <td>250 mB</td>
+                    <td>1gB</td>
+                </tr>
+                <tr>
+                    <th scope="row">Bandwidth</th>
+                    <td>512 mB per mont</td>
+                    <td>50gB per mont</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td></td>
+                    <td colspan="2">Sign up now and save 10%</td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+
+
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+		integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+		crossorigin="anonymous"></script>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"
+		integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+		crossorigin="anonymous"></script>
+	<script
+		src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"
+		integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+		crossorigin="anonymous"></script>
+		
+		<script type="text/javascript">
+		  $(document).ready(function() {
+			
+			  let $charCount, maxCount;
+			  $charCount = $('#meinModal .char-count');
+			  maxCount = parseInt($charCount.data('max'), 10);
+			  
+			  $('#meinModal textarea').on('keyup', function(e){
+				  let tweetLength = $(e.currentTarget).val().length;
+				  $charCount.html(maxCount -tweetLength);
+			  });
+			  
+		  });
+		  
+		</script>
+</body>
+</html>

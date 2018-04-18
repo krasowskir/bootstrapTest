@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<body>
+	<form action="/myFormAbgegeben" method="get">
+		<label for="fuckYou">deine EIngabe</label> <input type="text"
+			name="fuckYou" /> <label for="meinPasswort">Passwort...</label> <input
+			type="password" name="meinPasswort" /> <label for="meinRadio">mein
+			Lied</label> Eminem <input type="radio" name="meinRadio" value="Eminem" /> 50
+		cent <input type="radio" name="meinRadio" value="50cent" /> Sia <input
+			type="radio" name="meinRadio" value="Sia" /> <select
+			name="meineSelectBox" size="3">
+			<option value="ipod">IPod</option>
+			<option value="iphone">IPhone</option>
+			<option value="ipad">IPad</option>
+			<option value="macbook">MacBook</option>
+		</select> <input type="file" value="meine Datei..." /> <input type="image"
+			src="imgs/buttons.png" width="40" height="8" />
+		<button type="button">
+			<img src="imgs/onButton.png" width="20" height="20" /> Add
+		</button>
+		<input type="hidden" name="bookmark" value="myForm" /> <label><input
+			type="text" name="age" required="required" /> Age</label>
+		<div>
+			<input type="radio" name="gender" id="male" value="male" /> <label
+				for="male">Male</label> <input type="radio" name="gender"
+				id="female" value="female" /> <label for="female">Female</label>
+
+		</div>
+		<div>
+			<label for="meinDatum">das Datum...</label> <input type="date"
+				name="meinDatum" />
+		</div>
+		<div>
+			<label for="meinEmail">das Email...</label> <input type="email"
+				name="meinEmail" required="required" />
+		</div>
+		<div>
+			<label for="meinUrl">das Url...</label> <input type="url"
+				name="meinUrl" required="required" />
+		</div>
+
+		<fieldset>
+			<legend>Your details...</legend>
+			<div>
+				<label for="meinSuche">die Suche...</label> <input type="search"
+					name="meinSuche" required="required" /> <input type="submit"
+					value="search..." />
+			</div>
+		</fieldset>
+		<button type="submit">Schick hin!</button>
+	</form>
+</body>
+</html>
